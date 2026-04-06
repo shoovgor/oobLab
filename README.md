@@ -1,2 +1,25 @@
-# oobLab
-labTaskOfThree
+# Shape Inheritance Project
+
+Энэ төсөл нь **ерөнхийлөлт (generalization)**, **удамшил (inheritance)**, **хийсвэр класс (abstract class)**, гэсэн OOP ойлголтуудыг ашиглан 2 хэмжээст дүрсүүдийг загварчилсан болно.
+
+## Бодлогын агуулга
+
+`Shape` классаас `Shape2D` класс удамшина.  
+`Shape2D` классаас дараах хүүхэд классууд удамшина:
+
+- `Circle`
+- `Square`
+- `Triangle`
+
+Тухайн дүрс бүр өөрийн гэсэн өгөгдөл болон талбай, периметрийн тооцоололтой байна.
+
+---
+
+# Классын бүтэц
+
+```text
+Shape
+ └── Shape2D
+      ├── Circle
+      ├── Square
+      └── Triangle
