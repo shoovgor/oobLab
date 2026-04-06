@@ -102,15 +102,62 @@ public:
         cout << "Hureenii urt: " << perimeter() << "\n\n";
     }
 };
- 
+ // Гурвалжин класс
+class Triangle : public Shape2D {
+private:
+    double side;
+    Point A, B, C;
+
+    void calculateVertices() { // tuslah function
+        double h = sqrt(3.0) / 2.0 * side;
+        A = refPoint; // oroin tseg
+        B = {refPoint.x - side / 2.0, refPoint.y - h};
+        C = {refPoint.x + side / 2.0, refPoint.y - h};
+    }
+
+public:
+    Triangle(const string& n, Point oroinTseg, double s)
+            : Shape2D(n, oroinTseg), side(s) {
+        calculateVertices();
+    }
+
+    double area() const override {
+        return sqrt(3.0) / 4.0 * side * side;
+    }
+
+    double perimeter() const override {
+        return 3 * side;
+    }
+
+    void printInfo() const override {
+        cout << "===== Zuv Gurvaljin =====\n";
+        cout << "Ner: " << name << "\n";
+        cout << "Taliin urt: " << side << "\n";
+        cout << "Oroinuud:\n";
+        cout << "A(" << A.x << ", " << A.y << ")\n";
+        cout << "B(" << B.x << ", " << B.y << ")\n";
+        cout << "C(" << C.x << ", " << C.y << ")\n";
+        cout << "Talbai: " << area() << "\n";
+        cout << "Hureenii urt: " << perimeter() << "\n\n";
+    }
+};
+
 int main() {
     cout << fixed;
- 
+
     Circle c("C1", {2, 3}, 5);
     Square s("S1", {0, 10}, 4);
- 
-    c.printInfo();
-    s.printInfo();
- 
+    Triangle t("T1", {0, 8}, 6);
+
+    Shape2D* shapes[3];
+    shapes[0] = &c;
+    shapes[1] = &s;
+    shapes[2] = &t;
+
+    // buh dursiin medeelliig hevleh
+    for (int i = 0; i < 3; i++) {
+        shapes[i]->printInfo();
+    }
+
     return 0;
 }
