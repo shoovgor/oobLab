@@ -35,11 +35,6 @@ int main() {
         return a->area() < b->area();
     });
 
-    cout << "=== Talbaigaar erembelsen ===\n\n";
-    for (Shape2D* s : shapes) {
-        s->printInfo();
-    }
-
     for (Shape2D* s : shapes) {
         delete s;
     }
