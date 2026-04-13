@@ -8,6 +8,8 @@ protected:
     Point refPoint;
 
 public:
-    Shape2D(const string& n, Point p) : Shape(n), refPoint(p) {}
+    Shape2D(const string& n, Point p) : Shape(n) {
+        refPoint = p;
+    }
 };
 #endif

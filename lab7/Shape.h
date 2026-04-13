@@ -9,8 +9,10 @@ protected:
     string name;
 
 public:
-    Shape(const string& n = "") : name(n) {}
-    virtual ~Shape() {}
+    Shape(const string& n = ""){
+        name = n;
+    }
+    ~Shape() {}
 };
 
 #endif

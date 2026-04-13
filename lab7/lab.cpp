@@ -10,16 +10,24 @@
     #include "PI.h"
     using namespace std;
 
-    int main() {
-        cout << fixed;
+int main() {
+    cout << "\n";
+    Circle c1("C1", {2, 3}, 5);
+    Circle c2("C2", {0, 0}, 2);
 
-        Circle c("C1", {2, 3}, 5);
-        Square s("S1", {0, 10}, 4);
-        Triangle t("T1", {0, 8}, 6);
+    Square s1("S1", {0, 10}, 4);
+    Square s2("S2", {5, 5}, 3);
 
-        c.printInfo();
-        s.printInfo();
-        t.printInfo();
+    Triangle t1("T1", {0, 8}, 6);
+    Triangle t2("T2", {2, 7}, 4);
 
-        return 0;
-    }
+    c1.printInfo();
+    c2.printInfo();
+
+    s1.printInfo();
+    s2.printInfo();
+
+    t1.printInfo();
+    t2.printInfo();
+return 0;
+}
