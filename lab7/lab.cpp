@@ -24,16 +24,20 @@ int main() {
     shapes.push_back(new Triangle("T1", {0, 8}, 6));
     shapes.push_back(new Triangle("T2", {2, 7}, 4));
 
-    cout << "=== Talbaigaar erembelsen ===\n\n";
-    for (int i = 0; i < shapes.size(); i++) {
-        cout << i + 1 << ". "
-            << shapes[i]->getName()
-            << " - Talbai: " << shapes[i]->area() << "\n";
+    cout << "=== Anhnii baidal ===\n\n";
+    for (Shape2D* s : shapes) {
+        s->printInfo();
     }
 
     sort(shapes.begin(), shapes.end(), [](Shape2D* a, Shape2D* b) {
         return a->area() < b->area();
     });
+
+    cout << "=== Talbaigaar erembelsen ===\n\n";
+    for (Shape2D* s : shapes) {
+        cout << "Ner: " << s->getName()
+             << " | Talbai: " << s->area() << "\n";
+    }
 
     for (Shape2D* s : shapes) {
         delete s;
