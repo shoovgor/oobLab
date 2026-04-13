@@ -7,8 +7,8 @@
     #include "Circle.h"
     #include "Square.h"
     #include "Triangle.h"
+    #include "PI.h"
     using namespace std;
-    const double PI = acos(-1.0);
 
     int main() {
         cout << fixed;

@@ -1,5 +1,5 @@
 #ifndef TRIANGLE_H
-#define TRIENGLE_H
+#define TRIANGLE_H
 
 #include "Shape2D.h"
 #include "Point.h"

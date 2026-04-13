@@ -1,10 +1,10 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
 
+#include "PI.h"
 #include "Shape2D.h"
 #include "Point.h"
 #include <iostream>
-const double PI = acos(-1.0);
 
 using namespace std;
 class Circle : public Shape2D {
