@@ -12,7 +12,7 @@ public:
     Shape(const string& n = ""){
         name = n;
     }
-    ~Shape() {}
+    virtual ~Shape() {}
 };
 
 #endif
