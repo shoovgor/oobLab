@@ -8,13 +8,25 @@ class Shape {
 protected:
     string name;
 
+private:
+    static int objectCount;  
+
 public:
     Shape(const string& n = "") {
-        name = n;
+        this->name = n;      
+        objectCount++;        
     }
 
     string getName() const {
-        return name;
+        return this->name;  
+    }
+
+    static int getObjectCount() {
+        return objectCount;
+    }
+
+    static void setObjectCount(int count) {
+        objectCount = count;
     }
 
     virtual ~Shape() {}

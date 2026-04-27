@@ -11,6 +11,7 @@
 #include "PI.h"
 
 using namespace std;
+int Shape::objectCount = 0;
 
 int main() {
     vector<Shape2D*> shapes;
@@ -23,6 +24,8 @@ int main() {
 
     shapes.push_back(new Triangle("T1", {0, 8}, 6));
     shapes.push_back(new Triangle("T2", {2, 7}, 4));
+
+    cout << "Niit uusgesen Shape object: " << Shape::getObjectCount() << "\n\n";
 
     cout << "=== Anhnii baidal ===\n\n";
     for (Shape2D* s : shapes) {
