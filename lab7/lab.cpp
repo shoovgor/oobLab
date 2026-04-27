@@ -45,6 +45,6 @@ int main() {
     for (Shape2D* s : shapes) {
         delete s;
     }
-
+    cout << "\nUstgasnii daraah Shape object: " << Shape::getObjectCount() << "\n";
     return 0;
 }

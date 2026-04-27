@@ -9,16 +9,16 @@ protected:
     string name;
 
 private:
-    static int objectCount;  
+    static int objectCount;
 
 public:
     Shape(const string& n = "") {
-        this->name = n;      
-        objectCount++;        
+        this->name = n;
+        objectCount++;
     }
 
     string getName() const {
-        return this->name;  
+        return this->name;
     }
 
     static int getObjectCount() {
@@ -29,7 +29,9 @@ public:
         objectCount = count;
     }
 
-    virtual ~Shape() {}
+    virtual ~Shape() {
+        objectCount--;
+    }
 };
 
 #endif
